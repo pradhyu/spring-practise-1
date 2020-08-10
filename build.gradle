@@ -17,6 +17,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	// following two lines to have prometheus in acuator
+	compile group: 'io.micrometer', name: 'micrometer-core', version: '1.5.3'
+	compile group: 'io.micrometer', name: 'micrometer-registry-prometheus', version: '1.5.3'
 	runtimeOnly 'com.h2database:h2'
 	compileOnly "org.projectlombok:lombok"
 	runtimeOnly 'org.hsqldb:hsqldb'
